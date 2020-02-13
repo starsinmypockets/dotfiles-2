@@ -29,4 +29,4 @@ alias soulseek="screen ~/Apps/SoulseekQt-2016-1-17-64bit"
 alias tor="/home/pj/Apps/tor-browser_en-US/start-tor-browser.desktop"
 alias v="vim"
 alias remouse="sudo modprobe -r psmouse && sudo modprobe psmouse"
-lias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
