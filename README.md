@@ -27,3 +27,11 @@ To regenerate current tmux `plugins.txt` do:
 $ cd ~/.tmux
 $ ls plugins >> plugins.txt
 ```
+
+## fzf
+
+Install fzf
+```bash
+$ git clone https://github.com/junegunn/fzf.git .fzf
+```
+
