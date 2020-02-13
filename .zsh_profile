@@ -1,0 +1,32 @@
+echo "loading .zsh_profile"
+
+#GIT
+git config --global diff.tool vimdiff
+git config --global difftool.prompt false
+git config --global alias.d difftool
+
+# NVM
+NODE_VERSION=12
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+nvm use $NODE_VERSION
+
+# EXPORTS
+export MYSQLBIN='/usr/local/bin/'
+export EDITOR="vim"
+export VDPAU_DRIVER=va_gl
+export ZSH_THEME="darkblood"
+export RIPGREP_CONFIG_PATH="$HOME"
+
+# ALIASES
+alias aliases="compgen -a"
+alias chrome_no_sec='open -a Google\ Chrome --args --disable-web-security'
+alias dka="docker kill $(docker ps -q)"
+alias lss="ls -la"
+alias rmswp='find ./ -type f -name "\.*sw[fghijklmnop]" -delete'
+alias rmlasthost="sed -i '' -e '$ d' $HOME/.ssh/known_hosts"
+alias soulseek="screen ~/Apps/SoulseekQt-2016-1-17-64bit"
+alias tor="/home/pj/Apps/tor-browser_en-US/start-tor-browser.desktop"
+alias v="vim"
+alias remouse="sudo modprobe -r psmouse && sudo modprobe psmouse"
+lias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
