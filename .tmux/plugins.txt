@@ -1,0 +1,3 @@
+tmux-fzf
+tmux-sidebar
+tpm

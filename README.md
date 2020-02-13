@@ -17,3 +17,13 @@ $ cd ~/.vim
 $ ls bundle >> bundles.txt
 ```
 
+## Tmux plugins
+
+Install plugins manually in from `plugins.txt`
+
+To regenerate current tmux `plugins.txt` do:
+
+```bash
+$ cd ~/.tmux
+$ ls plugins >> plugins.txt
+```
