@@ -3,10 +3,23 @@
 Dotfiles are stored in a bare git repo at ~/.cfg and managed using an aliased version of 
 git called `config`
 
-See [here](https://www.atlassian.com/git/tutorials/dotfiles) for the complete rundown
-of the method used
+## Updating
 
-## Vim modules
+Use git, aliased as `config`
+
+```bash
+$ config add .yourdotfile
+$ config commit
+$ config push origin master
+```
+
+## Installation
+
+For instructions on how to install dotfiles on your system, see [here](https://www.atlassian.com/git/tutorials/dotfiles)
+
+## Contents
+
+### Vim modules
 
 Install manually from `bundles.txt`
 
@@ -17,7 +30,7 @@ $ cd ~/.vim
 $ ls bundle >> bundles.txt
 ```
 
-## Tmux plugins
+### Tmux plugins
 
 Install plugins manually in from `plugins.txt`
 
@@ -28,14 +41,14 @@ $ cd ~/.tmux
 $ ls plugins >> plugins.txt
 ```
 
-## fzf
+### fzf
 
 Install fzf
 ```bash
 $ git clone https://github.com/junegunn/fzf.git .fzf
 ```
 
-## zsh
+### zsh
 
 Install zsh.
 
@@ -43,4 +56,3 @@ Also, install oh-my-zsh:
 ```bash
 $ git clone https://github.com/robbyrussell/oh-my-zsh.git
 ```
-
