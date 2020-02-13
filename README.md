@@ -35,3 +35,12 @@ Install fzf
 $ git clone https://github.com/junegunn/fzf.git .fzf
 ```
 
+## zsh
+
+Install zsh.
+
+Also, install oh-my-zsh:
+```bash
+$ git clone https://github.com/robbyrussell/oh-my-zsh.git
+```
+
