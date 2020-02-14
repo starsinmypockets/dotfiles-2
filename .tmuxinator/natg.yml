@@ -10,9 +10,12 @@ windows:
       panes:
         - editor1:
             - cd ~/Datopian/repos/frontend-v2/themes/national-grid
+            - ctags .
             - vim -c "NERDTree"
         - editor2:
-            - cd ~/Datoptian/repos/data-explorer
+            - cd ~/Datopian/repos/data-explorer
+            - ctags .
+            - lss
   - server:
       layout: even-vertical
       panes:

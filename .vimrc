@@ -16,7 +16,7 @@ set splitright
 set splitbelow
 set statusline="%f%m%r%h%w [%Y] [0x%02.2B]%< %F%=%4v,%4l %3p%% of %L"
 set laststatus=2
-
+set tags=tags
 
 "" File Types
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
@@ -54,12 +54,21 @@ nnoremap <Leader>n :set nonumber!<CR>
 nnoremap <Leader>nt :NERDTreeToggle<CR>
 nnoremap <Leader>ct :CommandT<CR>
 nnoremap <Leader>gg :GitGutterToggle<CR>
+nnoremap <Leader>v :vsplit<CR>
+nnoremap <Leader>h :split<CR>
+nnoremap <Leader>nh :nohl<CR>
 
 nnoremap <silent> <C-Left> :TmuxNavigateLeft<cr> 
 nnoremap <silent> <C-Down> :TmuxNavigateDown<cr>
 nnoremap <silent> <C-Up> :TmuxNavigateUp<cr> 
 nnoremap <silent> <C-Right> :TmuxNavigateRight<cr> 
 nnoremap <silent> <C-/> :TmuxNavigatePrevious<cr>
+
+"" disable arrow keys
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
 
 "" splits
 nnoremap <Leader>vs :vsplit<CR>
