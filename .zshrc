@@ -69,7 +69,7 @@ tmux -f ~/.tmux.conf
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(docker git npm nvm pip python tmux vi-mode yarn z ripgrep)
+plugins=(docker git npm nvm pip python tmux tmuxinator vi-mode yarn z ripgrep)
 
 eval "`pip completion --zsh`"
 source $ZSH/oh-my-zsh.sh
