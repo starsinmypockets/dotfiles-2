@@ -1,52 +1,26 @@
 # ~/.tmuxinator/natg.yml
 
-name: natg
+name: National Grid
 root: ~/
-
-# Optional tmux socket
-# socket_name: foo
-
-# Runs before everything. Use it to start daemons etc.
-# pre: sudo /etc/rc.d/mysqld start
-
-# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-# pre_window: rbenv shell 2.0.0-p247
-
-# Pass command line options to tmux. Useful for specifying a different tmux.conf.
-# tmux_options: -f ~/.tmux.mac.conf
-
-# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
-# tmux_command: byobu
-
-# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
-# startup_window: editor
-
-# Specitifes (by index) which pane of the specified window will be selected on project startup. If not set, the first pane is used.
+startup_window: editor
 startup_pane: 2
-
-# Controls whether the tmux session should be attached to automatically. Defaults to true.
-# attach: false
-
-# Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t ng
-
 windows:
   - editor:
-      layout: dbac,190x51,0,0{39x51,0,0[39x23,0,0,30,39x27,0,24,31],75x51,40,0,32,74x51,116,0,33} 
-      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
-      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
-      # synchronize: after
+      layout: even-horizontal
       panes:
-        - server1:
-          - kill -9 `lsof -t -i:4000`
-          - cd ~/Datopian/repos/frontend-v2
-          - yarn start
-        - server2:
-          - kill -9 `lsof -t -i:9090`
-          - cd ~/Datopian/repos/data-explorer
-          - yarn cosmos
         - editor1:
-          - cd ~/Datopian/repos/frontend-v2/themes/national-grid
+            - cd ~/Datopian/repos/frontend-v2/themes/national-grid
+            - vim -c "NERDTree"
         - editor2:
-          - cd ~/Datoptian/repos/data-explorer
-  - logs: tail -f log/development.log
+            - cd ~/Datoptian/repos/data-explorer
+  - server:
+      layout: even-vertical
+      panes:
+        - froontend-v2:
+            - kill -9 `lsof -t -i:4000`
+            - cd ~/Datopian/repos/frontend-v2
+            - yarn start
+        - data-explorer:
+            - kill -9 `lsof -t -i:9090`
+            - cd ~/Datopian/repos/data-explorer
+            - yarn cosmos

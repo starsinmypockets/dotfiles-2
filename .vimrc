@@ -24,6 +24,9 @@ autocmd FileType css setlocal shiftwidth=2 tabstop=2
 autocmd FileType less setlocal shiftwidth=2 tabstop=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 autocmd FileType python setlocal commentstring=#\ %s
+autocmd Filetype yml setlocal shiftwidth=2 commentstring=#\ %s
+autocmd Filetype yaml setlocal shiftwidth=2 commentstring=#\ %s
+
 "" autocmd BufRead,BufNewFile * setlocal signcolumn=auto
 
 highlight LineNr ctermfg=grey
