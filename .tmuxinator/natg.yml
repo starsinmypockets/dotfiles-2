@@ -9,21 +9,20 @@ windows:
       layout: even-horizontal
       panes:
         - editor1:
-            - cd ~/Datopian/repos/frontend-v2/themes/national-grid
+            - cd ~/Datopian/national-grid/frontend-v2/
             - ctags .
-            - vim -c "NERDTree"
         - editor2:
-            - cd ~/Datopian/repos/data-explorer
+            - cd ~/Datopian/national-grid/frontend-v2/themes/national-grid
             - ctags .
-            - lss
   - server:
       layout: even-vertical
       panes:
         - froontend-v2:
             - kill -9 `lsof -t -i:4000`
-            - cd ~/Datopian/repos/frontend-v2
+            - cd ~/Datopian/national-grid/frontend-v2
             - yarn start
         - data-explorer:
             - kill -9 `lsof -t -i:9090`
+            - cd ~/Datopian/national-grid/frontend-v2
             - cd ~/Datopian/repos/data-explorer
             - yarn cosmos

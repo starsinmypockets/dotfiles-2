@@ -22,7 +22,7 @@ set tags=tags
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType css setlocal shiftwidth=2 tabstop=2
 autocmd FileType less setlocal shiftwidth=2 tabstop=2
-autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal commentstring=#\ %s
 autocmd Filetype yml setlocal shiftwidth=2 commentstring=#\ %s
 autocmd Filetype yaml setlocal shiftwidth=2 commentstring=#\ %s
@@ -65,10 +65,10 @@ nnoremap <silent> <C-Right> :TmuxNavigateRight<cr> 
 nnoremap <silent> <C-/> :TmuxNavigatePrevious<cr>
 
 "" disable arrow keys
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
+"" noremap <Up> <Nop>
+"" noremap <Down> <Nop>
+"" noremap <Left> <Nop>
+"" noremap <Right> <Nop>
 
 "" splits
 nnoremap <Leader>vs :vsplit<CR>

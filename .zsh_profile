@@ -31,3 +31,6 @@ alias v="vim"
 alias remouse="sudo modprobe -r psmouse && sudo modprobe psmouse"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias mux="tmuxinator"
+
+# CREDS
+source ~/.heroku
