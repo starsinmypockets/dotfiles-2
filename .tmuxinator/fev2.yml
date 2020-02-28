@@ -1,6 +1,6 @@
 # ~/.tmuxinator/natg.yml
 
-name: National Grid
+name: Frontend v2
 root: ~/
 startup_window: editor
 startup_pane: 2
@@ -11,16 +11,12 @@ windows:
         - editor1:
             - cd ~/Datopian/repos/frontend-v2/
             - ctags .
-        - editor2:
-            - cd ~/Datopian/national-grid/repos/national-grid
-            - ctags .
+        - editor1:
+            - cd ~/Datopian/repos/frontend-v2/
   - server:
       layout: even-vertical
       panes:
-        - froontend-v2:
+        - frontend-v2:
             - kill -9 `lsof -t -i:4000`
             - cd ~/Datopian/repos/frontend-v2
             - yarn start
-        - data-explorer:
-            - cd ~/Datopian/national-grid/repos/docker-ckan
-            - docker-compose -f docker-compose.dev.yml up
