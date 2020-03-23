@@ -1,0 +1,110 @@
+127.0.0.1	localhost
+127.0.0.1	ckan
+127.0.1.1	paul-ThinkPad-P53
+
+# The following lines are desirable for IPv6 capable hosts
+::1     ip6-localhost ip6-loopback
+fe00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+
+172.104.22.11 li1
+
+# work black-hole
+# Block Facebook IPv4
+127.0.0.1   www.facebook.com
+127.0.0.1   facebook.com
+127.0.0.1   login.facebook.com
+127.0.0.1   www.login.facebook.com
+127.0.0.1   fbcdn.net
+127.0.0.1   www.fbcdn.net
+127.0.0.1   fbcdn.com
+127.0.0.1   www.fbcdn.com
+127.0.0.1   static.ak.fbcdn.net
+127.0.0.1   static.ak.connect.facebook.com
+127.0.0.1   connect.facebook.net
+127.0.0.1   www.connect.facebook.net
+
+# Block Twitter
+# 127.0.0.1 www.twitter.com
+# 127.0.0.1 twitter.com
+# 127.0.0.1   apps.facebook.com
+
+# Block Facebook IPv6
+fe80::1%lo0 facebook.com
+fe80::1%lo0 login.facebook.com
+fe80::1%lo0 www.login.facebook.com
+fe80::1%lo0 fbcdn.net
+fe80::1%lo0 www.fbcdn.net
+fe80::1%lo0 fbcdn.com
+fe80::1%lo0 www.fbcdn.com
+fe80::1%lo0 static.ak.fbcdn.net
+fe80::1%lo0 static.ak.connect.facebook.com
+fe80::1%lo0 connect.facebook.net
+fe80::1%lo0 www.connect.facebook.net
+fe80::1%lo0 apps.facebook.com
+
+# Block instagram
+0.0.0.0 api.instagram.com
+0.0.0.0 black.ish.instagram.com
+0.0.0.0 i.instagram.com
+0.0.0.0 instagram-shv-01-ams2.fbcdn.net
+0.0.0.0 instagram-shv-01-ams3.fbcdn.net
+0.0.0.0 instagram-shv-01-ash5.fbcdn.net
+0.0.0.0 instagram-shv-01-atl1.fbcdn.net
+0.0.0.0 instagram-shv-01-bru2.fbcdn.net
+0.0.0.0 instagram-shv-01-cai1.fbcdn.net
+0.0.0.0 instagram-shv-01-cdg2.fbcdn.net
+0.0.0.0 instagram-shv-01-dfw1.fbcdn.net
+0.0.0.0 instagram-shv-01-fra3.fbcdn.net
+0.0.0.0 instagram-shv-01-gru1.fbcdn.net
+0.0.0.0 instagram-shv-01-hkg2.fbcdn.net
+0.0.0.0 instagram-shv-01-iad3.fbcdn.net
+0.0.0.0 instagram-shv-01-kul1.fbcdn.net
+0.0.0.0 instagram-shv-01-lax1.fbcdn.net
+0.0.0.0 instagram-shv-01-lga1.fbcdn.net
+0.0.0.0 instagram-shv-01-lhr3.fbcdn.net
+0.0.0.0 instagram-shv-01-mad1.fbcdn.net
+0.0.0.0 instagram-shv-01-mia1.fbcdn.net
+0.0.0.0 instagram-shv-01-mxp1.fbcdn.net
+0.0.0.0 instagram-shv-01-nrt1.fbcdn.net
+0.0.0.0 instagram-shv-01-ord1.fbcdn.net
+0.0.0.0 instagram-shv-01-sea1.fbcdn.net
+0.0.0.0 instagram-shv-01-sin1.fbcdn.net
+0.0.0.0 instagram-shv-01-sjc2.fbcdn.net
+0.0.0.0 instagram-shv-01-syd1.fbcdn.net
+0.0.0.0 instagram-shv-01-tpe1.fbcdn.net
+0.0.0.0 instagram-shv-01-vie1.fbcdn.net
+0.0.0.0 instagram-shv-02-cai1.fbcdn.net
+0.0.0.0 instagram-shv-02-hkg2.fbcdn.net
+0.0.0.0 instagram-shv-03-ash5.fbcdn.net
+0.0.0.0 instagram-shv-03-atn1.fbcdn.net
+0.0.0.0 instagram-shv-03-hkg1.fbcdn.net
+0.0.0.0 instagram-shv-03-lla1.fbcdn.net
+0.0.0.0 instagram-shv-03-prn2.fbcdn.net
+0.0.0.0 instagram-shv-03-xdc1.fbcdn.net
+0.0.0.0 instagram-shv-04-hkg1.fbcdn.net
+0.0.0.0 instagram-shv-06-atn1.fbcdn.net
+0.0.0.0 instagram-shv-06-lla1.fbcdn.net
+0.0.0.0 instagram-shv-07-ash4.fbcdn.net
+0.0.0.0 instagram-shv-07-frc3.fbcdn.net
+0.0.0.0 instagram-shv-09-frc1.fbcdn.net
+0.0.0.0 instagram-shv-09-lla1.fbcdn.net
+0.0.0.0 instagram-shv-12-frc1.fbcdn.net
+0.0.0.0 instagram-shv-12-frc3.fbcdn.net
+0.0.0.0 instagram-shv-12-lla1.fbcdn.net
+0.0.0.0 instagram-shv-12-prn1.fbcdn.net
+0.0.0.0 instagram-shv-13-frc1.fbcdn.net
+0.0.0.0 instagram-shv-17-prn1.fbcdn.net
+0.0.0.0 instagram-shv-18-prn1.fbcdn.net
+0.0.0.0 instagram.com
+0.0.0.0 instagramstatic-a.akamaihd.net
+0.0.0.0 instagramstatic-a.akamaihd.net.edgesuite.net
+0.0.0.0 logger.instagram.com
+0.0.0.0 platform.instagram.com
+0.0.0.0 scontent-iad3-1.cdninstagram.com
+0.0.0.0 scontent.cdninstagram.com
+0.0.0.0 telegraph-ash.instagram.com
+0.0.0.0 white.ish.instagram.com
+0.0.0.0 www.instagram.com

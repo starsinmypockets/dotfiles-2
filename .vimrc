@@ -21,9 +21,11 @@ set tags=tags
 "" File Types
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType css setlocal shiftwidth=2 tabstop=2
+autocmd FileType md setlocal shiftwidth=2 tabstop=2
 autocmd FileType less setlocal shiftwidth=2 tabstop=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal commentstring=#\ %s
+autocmd FileType python setlocal shiftwidth=4 tabstop=4
 autocmd Filetype yml setlocal shiftwidth=2 commentstring=#\ %s
 autocmd Filetype yaml setlocal shiftwidth=2 commentstring=#\ %s
 
@@ -113,10 +115,5 @@ set rtp+=~/.fzf
 "" set max line-length to 80
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 80)
-
-"" python
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
 
 let python_highlight_all = 1
