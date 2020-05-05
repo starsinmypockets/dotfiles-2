@@ -17,6 +17,7 @@ set splitbelow
 set statusline="%f%m%r%h%w [%Y] [0x%02.2B]%< %F%=%4v,%4l %3p%% of %L"
 set laststatus=2
 set tags=tags
+set omnifunc=syntaxcomplete#Complete
 
 "" File Types
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
