@@ -112,6 +112,8 @@ let g:ale_pattern_options = {'\.py$': {'ale_enabled': 0}}
 set rtp+=/usr/local/opt/fzf
 set rtp+=~/.fzf
 
+nnoremap <C-f> Files
+
 "" set max line-length to 80
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 80)

@@ -21,7 +21,11 @@ export RIPGREP_CONFIG_PATH="$HOME"
 # ALIASES
 alias aliases="compgen -a"
 alias chrome_no_sec='open -a Google\ Chrome --args --disable-web-security'
-alias dka="docker kill $(docker ps -q)"
+
+# docker cleanup
+alias docker_clean_images='docker rmi $(docker images -a --filter=dangling=true -q)'
+alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)'
+
 alias lss="ls -la"
 alias rmswp='find ./ -type f -name "\.*sw[fghijklmnop]" -delete'
 alias rmlasthost="sed -i '' -e '$ d' $HOME/.ssh/known_hosts"
@@ -32,6 +36,7 @@ alias remouse="sudo modprobe -r psmouse && sudo modprobe psmouse"
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias mux="tmuxinator"
 alias ys="yarn start"
+alias cleanall="docker system prune -a --volumes"
 
 # CREDS
 source ~/.heroku
