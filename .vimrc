@@ -60,6 +60,7 @@ nnoremap <Leader>gg :GitGutterToggle<CR>
 nnoremap <Leader>v :vsplit<CR>
 nnoremap <Leader>h :split<CR>
 nnoremap <Leader>nh :nohl<CR>
+nnoremap <Leader>f :Files<CR>
 
 nnoremap <silent> <C-Left> :TmuxNavigateLeft<cr> 
 nnoremap <silent> <C-Down> :TmuxNavigateDown<cr>

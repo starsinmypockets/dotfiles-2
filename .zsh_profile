@@ -40,3 +40,4 @@ alias cleanall="docker system prune -a --volumes"
 
 # CREDS
 source ~/.heroku
+source ~/functions.sh
