@@ -1,0 +1,14 @@
+# ~/.tmuxinator/inventory .yml
+
+name: GSA inventory app
+root: ~/
+startup_window: editor
+windows:
+  - server:
+      layout: even-horizontal
+      panes:
+        - inventory-app:
+            - cd ~/Datopian/GSA/inventory-app
+            - docker-compose down && docker-compose up -d && lss
+        - data-explorer:
+             cd ~/Datopian/GSA/inventory-app

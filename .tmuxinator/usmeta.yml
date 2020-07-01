@@ -1,0 +1,23 @@
+# ~/.tmuxinator/usmeta.yml
+
+name: US Metadata React
+root: ~/
+startup_window: editor
+startup_pane: 0
+windows:
+  - server:
+      layout: even-horizontal
+      panes:
+        - inventoryApp:
+            - cd ~/Datopian/GSA/inventory-app
+            - docker-compose down && docker-compose up
+        - yarn:
+            - cd ~/Datopian/GSA/react-usmetadata-app
+            - kill -9 $(lsof -t -i:3000)
+            - yarn start
+  - editor:
+      layout: even-horizontal
+      panes:
+        - editor:
+            - cd ~/Datopian/GSA/react-usmetadata-app
+            - lss

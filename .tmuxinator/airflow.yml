@@ -1,0 +1,37 @@
+# ~/.tmuxinator/airflow.yml
+
+name: Airflow React App 
+root: ~/Datopian/repose/airflow
+startup_window: react
+startup_pane: 0
+windows:
+  - editor:
+      layout: even-horizontal
+      panes:
+        - editor1:
+            - cd ~/Datopian/repos/airflow-dash-react/
+            - ls -la
+        - editor2:
+            - cd ~/Datopian/repos/airflow-dash-react/
+  - react:
+      layout: even-horizontal
+      panes:
+        - yarn:
+            - kill -9 `lsof -t -i:8080`
+            - cd ~/Datopian/repos/airflow-dash-react/
+            - yarn start
+        - editor:
+            - kill -9 `lsof -t -i:9090`
+            - cd ~/Datopian/repos/airflow-dash-react/
+            - yarn cosmos
+  - airflow-config-ui:
+      layout: even-vertical
+      panes:
+        - api:
+            - kill -9 `lsof -t -i:5000`
+            - cd ~/Datopian/repos/airflow-config-ui
+            - docker-compose up
+        - legacy-app:
+            - kill -9 `lsof -t -i:4200`
+            - cd ~/Datopian/repos/airflow-config-ui/ui
+            - ng serve

@@ -1,0 +1,35 @@
+# ~/.tmuxinator/natg.yml
+
+name: National Grid
+root: ~/
+startup_window: editor
+startup_pane: 1
+windows:
+  - editor:
+      layout: even-horizontal
+      panes:
+        - editor1:
+            - source ~/.national-grid
+            - cd ~/Datopian/ckanext/ckanext-ng_user 
+            - ctags .
+        - editor2:
+            - source ~/.national-grid
+            - cd ~/Datopian/ckanext/ckanext-ng_user 
+            - ctags .
+  - server:
+      layout: even-vertical
+      panes:
+        - frontend-v2:
+            - source ~/.national-grid
+            - kill -9 `lsof -t -i:4000`
+            - cd ~/Datopian/repos/frontend-v2
+            - cpnat && yst
+        - data-explorer:
+            - cd ~/Datopian/national-grid/repos/docker-ckan
+            - docker-compose -f docker-compose.dev.yml up
+  - ckanclassic:
+      panes:
+        - classic:
+          - source ~/.national-grid
+          - cd ~/Datopian/national-grid/repos/docker-ckan/src
+          - lss
