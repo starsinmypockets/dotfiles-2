@@ -31,6 +31,9 @@ alias rmswp='find ./ -type f -name "\.*sw[fghijklmnop]" -delete'
 alias soulseek="screen ~/Apps/SoulseekQt-2016-1-17-64bit"
 alias tor="/home/paul/Apps/tor-browser_en-US/Browser/start-tor-browser"
 alias ys="yarn start"
+alias cribgit=~/cribgit.sh
+alias deployusm=~/Datopian/scripts/react_deploy/deploy_react.sh
+alias cloc-git=~/cloc-git.sh
 
 # CREDS
 source ~/.heroku

@@ -10,7 +10,7 @@ windows:
       panes:
         - inventoryApp:
             - cd ~/Datopian/GSA/inventory-app
-            - docker-compose down && docker-compose up
+            - make clean build up-with-data
         - yarn:
             - cd ~/Datopian/GSA/react-usmetadata-app
             - kill -9 $(lsof -t -i:3000)
