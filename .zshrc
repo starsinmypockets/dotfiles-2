@@ -42,7 +42,23 @@ nohup greenclip daemon > /dev/null 2>&1 &
 # zsh fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-#Docker helper functions
+# tree command which ignores gitignored
+function treeg {
+    # tree respecting gitignore
+
+    local ignored=$(git ls-files -ci --others --directory --exclude-standard)
+    local ignored_filter=$(echo "$ignored" \
+                    | egrep -v "^#.*$|^[[:space:]]*$" \
+                    | sed 's~^/~~' \
+                    | sed 's~/$~~' \
+                    | tr "\\n" "|")
+    tree --prune -I ".git|${ignored_filter: : -1}" "$@"
+}
+
+D#ocker helper functions
+export FZF_DEFAULT_OPS="--extended"
+# export FZF_DEFAULT_COMMAND="fd --type f"
+# export FZF_CTRL_T_COMMAN="$FZF_DEFAULT_COMMAND"
 
 alias makesolr = 'docker build . -t datagov/catalog-solr'
 
