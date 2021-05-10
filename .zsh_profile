@@ -22,19 +22,22 @@ export RIPGREP_CONFIG_PATH="$HOME"
 alias aliases="compgen -a"
 alias blackhole="sudo cp ~/hosts /etc/hosts"
 alias chrome_no_sec='open -a Google\ Chrome --args --disable-web-security'
+alias cloc-git=~/cloc-git.sh
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias cribgit=~/cribgit.sh
+alias deployusm=~/Datopian/scripts/react_deploy/deploy_react.sh
+alias gcloud=~/google-cloud-sdk/bin/gcloud
 alias lss="ls -la"
 alias mux="tmuxinator"
+alias nocaps="setxkbmap -option ctrl:nocaps" # make sure caps lock is off first!
 alias remouse="sudo modprobe -r psmouse && sudo modprobe psmouse"
+alias reaudo="rm -r ~/.config/pulse; pulseaudio -k"
 alias rmlasthost="sed -i '' -e '$ d' $HOME/.ssh/known_hosts"
 alias rmswp='find ./ -type f -name "\.*sw[fghijklmnop]" -delete'
 alias soulseek="screen ~/Apps/SoulseekQt-2016-1-17-64bit"
 alias tor="/home/paul/Apps/tor-browser_en-US/Browser/start-tor-browser"
 alias ys="yarn start"
-alias cribgit=~/cribgit.sh
-alias deployusm=~/Datopian/scripts/react_deploy/deploy_react.sh
-alias cloc-git=~/cloc-git.sh
 
 # CREDS
-source ~/.heroku
+# source ~/.heroku
 source ~/functions.sh
