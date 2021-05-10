@@ -35,9 +35,9 @@ alias reaudo="rm -r ~/.config/pulse; pulseaudio -k"
 alias rmlasthost="sed -i '' -e '$ d' $HOME/.ssh/known_hosts"
 alias rmswp='find ./ -type f -name "\.*sw[fghijklmnop]" -delete'
 alias soulseek="screen ~/Apps/SoulseekQt-2016-1-17-64bit"
-alias tor="/home/paul/Apps/tor-browser_en-US/Browser/start-tor-browser"
+alias tor="$HOME/Apps/tor-browser_en-US/Browser/start-tor-browser"
 alias ys="yarn start"
 
-# CREDS
 # source ~/.heroku
+#
 source ~/functions.sh

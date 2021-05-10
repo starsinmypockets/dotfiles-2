@@ -55,7 +55,7 @@ function treeg {
     tree --prune -I ".git|${ignored_filter: : -1}" "$@"
 }
 
-D#ocker helper functions
+# Docker helper functions
 export FZF_DEFAULT_OPS="--extended"
 # export FZF_DEFAULT_COMMAND="fd --type f"
 # export FZF_CTRL_T_COMMAN="$FZF_DEFAULT_COMMAND"
