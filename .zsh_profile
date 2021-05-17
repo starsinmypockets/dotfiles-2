@@ -27,7 +27,6 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias cribgit=~/cribgit.sh
 alias deployusm=~/Datopian/scripts/react_deploy/deploy_react.sh
 alias gcloud=~/google-cloud-sdk/bin/gcloud
-alias lss="ls -la"
 alias mux="tmuxinator"
 alias nocaps="setxkbmap -option ctrl:nocaps" # make sure caps lock is off first!
 alias remouse="sudo modprobe -r psmouse && sudo modprobe psmouse"

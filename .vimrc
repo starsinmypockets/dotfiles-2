@@ -2,7 +2,6 @@ let g:pathogen_disabled = ['syntastic']
 execute pathogen#infect()
 
 set number
-set relativenumber
 set nu
 set hlsearch
 set shiftwidth=2    " Indents will have a width of 4
@@ -30,7 +29,7 @@ autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType css setlocal shiftwidth=2 tabstop=2
 autocmd FileType md setlocal shiftwidth=2 tabstop=2
 autocmd FileType less setlocal shiftwidth=2 tabstop=2
-autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 omnifunc=javascriptcomplete#CompleteJS
+"" autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 omnifunc=javascriptcomplete#CompleteJS indentexpr=''
 autocmd FileType python setlocal commentstring=#\ %s
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
 autocmd Filetype yml setlocal shiftwidth=2 commentstring=#\ %s
@@ -58,6 +57,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'HerringtonDarkholme/yats.vim'
+Plug 'maxmellon/vim-jsx-pretty'
 
 " Initialize plugin system
 call plug#end()
@@ -72,7 +72,7 @@ let mapleader = " "
 
 nnoremap <Leader>p :set paste!<CR>
 nnoremap <Leader>pp :Prettier<CR>
-nnoremap <Leader>n :set norelativenumber! nonumber!<CR>
+nnoremap <Leader>n :set nonumber!<CR>
 nnoremap <Leader>nt :NERDTreeToggle<CR>
 nnoremap <Leader>ct :CommandT<CR>
 nnoremap <Leader>gg :GitGutterToggle<CR>
@@ -317,6 +317,9 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
+
+"" CUSTOM COC COLORS
+highlight CocHintFloat ctermfg=Yellow  guifg=#ff0000
 """
 "" COC END
 """
