@@ -18,7 +18,7 @@ set splitbelow
 set laststatus=2
 set tags=tags
 set omnifunc=syntaxcomplete#Complete
-set statusline+=%F " show filename/path
+set statusline+=%F\ %l\:%c " filename linenum:colnum
 set ignorecase " Ignore case in search...
 set smartcase " ...unless we use capitals in search
 set scrolloff=8
@@ -39,6 +39,7 @@ autocmd Filetype yaml setlocal shiftwidth=2 commentstring=#\ %s
 highlight LineNr ctermfg=grey
 colorscheme desert
 
+
 "" Man pages
 runtime! ftplugin/man.vim
 
@@ -58,6 +59,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'jparise/vim-graphql'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " Initialize plugin system
 call plug#end()
@@ -76,11 +80,14 @@ nnoremap <Leader>n :set nonumber!<CR>
 nnoremap <Leader>nt :NERDTreeToggle<CR>
 nnoremap <Leader>ct :CommandT<CR>
 nnoremap <Leader>gg :GitGutterToggle<CR>
+nnoremap <Leader>gd :Gdiff<CR>
+nnoremap <Leader>gb :Gblame<CR>
 nnoremap <Leader>v :vsplit<CR>
 nnoremap <Leader>h :split<CR>
 nnoremap <Leader>nh :nohl<CR>
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>h :nohlsearch<CR>
+nnoremap <Leader>w <C-w>
 nnoremap <expr> <Leader>s exists('g:syntax_on') ? ':syntax off<cr>' : ':syntax enable<cr>'
 
 nnoremap <silent> <C-Left> :TmuxNavigateLeft<cr> 
@@ -213,7 +220,7 @@ nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gdd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
@@ -323,3 +330,69 @@ highlight CocHintFloat ctermfg=Yellow  guifg=#ff0000
 """
 "" COC END
 """
+
+highlight CocErrorFloat ctermfg=LightYellow
+
+"""
+" Vim Closetag START
+"""
+" filenames like *.xml, *.html, *.xhtml, ...
+" These are the file extensions where this plugin is enabled.
+"
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
+
+" filenames like *.xml, *.xhtml, ...
+" This will make the list of non-closing tags self-closing in the specified files.
+"
+let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
+
+" filetypes like xml, html, xhtml, ...
+" These are the file types where this plugin is enabled.
+"
+let g:closetag_filetypes = 'html,xhtml,phtml'
+
+" filetypes like xml, xhtml, ...
+" This will make the list of non-closing tags self-closing in the specified files.
+"
+let g:closetag_xhtml_filetypes = 'xhtml,jsx'
+
+" integer value [0|1]
+" This will make the list of non-closing tags case-sensitive (e.g. `<Link>` will be closed while `<link>` won't.)
+"
+let g:closetag_emptyTags_caseSensitive = 1
+
+" dict
+" Disables auto-close if not in a "valid" region (based on filetype)
+"
+let g:closetag_regions = {
+    \ 'typescript.tsx': 'jsxRegion,tsxRegion',
+    \ 'javascript.jsx': 'jsxRegion',
+    \ 'typescriptreact': 'jsxRegion,tsxRegion',
+    \ 'javascriptreact': 'jsxRegion',
+    \ }
+
+" Shortcut for closing tags, default is '>'
+"
+let g:closetag_shortcut = '>'
+
+" Add > at current position without closing the current tag, default is ''
+"
+let g:closetag_close_shortcut = '<leader>>'
+
+"""
+" vim closetag END
+"""
+
+let NERDTreeShowHidden=1
+
+"""
+" ULTISNIPS
+"""
+" - https://github.com/Valloric/YouCompleteMe
+" - https://github.com/nvim-lua/completion-nvim
+let g:UltiSnipsExpandTrigger="<f5>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="horizontal"

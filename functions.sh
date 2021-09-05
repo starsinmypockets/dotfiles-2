@@ -18,3 +18,13 @@ fixwifi() {
   sudo iw wlan0 set power_save off
   sudo iw reg set US
 }
+
+# Find file in current directory root
+ff() {
+  find . type f | fzf
+}
+
+# count number of fs watchers
+watchers() {
+  ~/inotifywatchers.sh
+}

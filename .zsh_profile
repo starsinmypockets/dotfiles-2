@@ -6,10 +6,9 @@ git config --global difftool.prompt false
 git config --global alias.d difftool
 
 # NVM
-NODE_VERSION=12
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
-nvm use $NODE_VERSION
+nvm use 14
 
 # EXPORTS
 export MYSQLBIN='/usr/local/bin/'
@@ -27,6 +26,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias cribgit=~/cribgit.sh
 alias deployusm=~/Datopian/scripts/react_deploy/deploy_react.sh
 alias gcloud=~/google-cloud-sdk/bin/gcloud
+alias lss="ls -la"
 alias mux="tmuxinator"
 alias nocaps="setxkbmap -option ctrl:nocaps" # make sure caps lock is off first!
 alias remouse="sudo modprobe -r psmouse && sudo modprobe psmouse"
@@ -40,3 +40,5 @@ alias ys="yarn start"
 # source ~/.heroku
 #
 source ~/functions.sh
+
+# sudo mongod --fork --logpath /var/log/mongodb/mongoddb.log
