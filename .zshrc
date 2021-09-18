@@ -37,7 +37,7 @@ rld-greenclip() { killall greenclip ; nohup greenclip daemon > /dev/null 2>&1 & 
 # greenclip clear history
 derez-greenclip() { killall greenclip ; rm ~/.cache/greenclip.history && nohup greenclip daemon > /dev/null 2>&1 & }
 
-nohup greenclip daemon > /dev/null 2>&1 &
+rld-greenclip
 
 # zsh fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

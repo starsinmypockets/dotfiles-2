@@ -31,9 +31,11 @@ alias mux="tmuxinator"
 alias nocaps="setxkbmap -option ctrl:nocaps" # make sure caps lock is off first!
 alias remouse="sudo modprobe -r psmouse && sudo modprobe psmouse"
 alias reaudo="rm -r ~/.config/pulse; pulseaudio -k"
+alias regnome="killall -SIGQUIT gnome-shell" # restart gnome -- can fix some latency issues
 alias rmlasthost="sed -i '' -e '$ d' $HOME/.ssh/known_hosts"
 alias rmswp='find ./ -type f -name "\.*sw[fghijklmnop]" -delete'
 alias soulseek="screen ~/Apps/SoulseekQt-2016-1-17-64bit"
+alias top="sudo htop"
 alias tor="$HOME/Apps/tor-browser_en-US/Browser/start-tor-browser"
 alias ys="yarn start"
 
