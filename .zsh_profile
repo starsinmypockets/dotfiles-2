@@ -21,11 +21,13 @@ export RIPGREP_CONFIG_PATH="$HOME"
 alias aliases="compgen -a"
 alias blackhole="sudo cp ~/hosts /etc/hosts"
 alias chrome_no_sec='open -a Google\ Chrome --args --disable-web-security'
+alias clip='xclip -selection clipboard'
 alias cloc-git=~/cloc-git.sh
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias cribgit=~/cribgit.sh
 alias deployusm=~/Datopian/scripts/react_deploy/deploy_react.sh
 alias gcloud=~/google-cloud-sdk/bin/gcloud
+alias glg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 alias lss="ls -la"
 alias mux="tmuxinator"
 alias nocaps="setxkbmap -option ctrl:nocaps" # make sure caps lock is off first!
@@ -37,7 +39,13 @@ alias rmswp='find ./ -type f -name "\.*sw[fghijklmnop]" -delete'
 alias soulseek="screen ~/Apps/SoulseekQt-2016-1-17-64bit"
 alias top="sudo htop"
 alias tor="$HOME/Apps/tor-browser_en-US/Browser/start-tor-browser"
+alias tt="tree -f"
+alias vd="vd --default-width 100"
 alias ys="yarn start"
+alias anyconnect="timeout 10m /opt/cisco/anyconnect/bin/vpnui"
+alias dp="php ~/datastore-parse.php"
+alias datastore-parse="php ~/datastore-parse.php"
+alias vim="nvim"
 
 # source ~/.heroku
 #
