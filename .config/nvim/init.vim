@@ -54,7 +54,6 @@ nnoremap <Leader>p :set paste!<CR>
 nnoremap <Leader>pp :Prettier<CR>
 nnoremap <Leader>n :set nonumber!<CR>
 nnoremap <Leader>nt :NERDTreeToggle<CR>
-nnoremap <Leader>ct :CommandT<CR>
 nnoremap <Leader>gg :GitGutterToggle<CR>
 nnoremap <Leader>gd :Gdiff<CR>
 nnoremap <Leader>gb :Gblame<CR>
@@ -133,7 +132,10 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
-Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'p00f/nvim-ts-rainbow'
 Plug 'ianks/vim-tsx'
 Plug 'github/copilot.vim'
 Plug 'windwp/nvim-autopairs'
@@ -155,16 +157,11 @@ call plug#end()
 
 
 " Set completeopt to have a better completion experience
-set completeopt=menuone,noinsert,noselect
+" set completeopt=menuone,noinsert,noselect
 
 " Avoid showing message extra message when using completion
-set shortmess+=c
-set completeopt=menu,menuone,noselect
-
-"""
-" LazyGit
-"""
-nnoremap <silent> <leader>gg :LazyGit<CR>
+" set shortmess+=c
+" set completeopt=menu,menuone,noselect
 
 """""""""
 " FOLDS
@@ -194,3 +191,4 @@ EOF
 """
 lua dofile('/home/paul/.config/nvim/nvim-cmp.lua')
 lua dofile('/home/paul/.config/nvim/lsp-config.lua')
+lua dofile('/home/paul/.config/nvim/nvim-ts-rainbow.lua')

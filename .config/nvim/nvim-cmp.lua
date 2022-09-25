@@ -22,14 +22,26 @@
       ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
     sources = cmp.config.sources({
-      { name = 'nvim_lsp' },
+      { name = 'nvim_lsp', keyword_length = 3 },
       { name = 'vsnip' }, -- For vsnip users.
+      { name = 'treesitter'},
       -- { name = 'luasnip' }, -- For luasnip users.
       -- { name = 'ultisnips' }, -- For ultisnips users.
       -- { name = 'snippy' }, -- For snippy users.
     }, {
-      { name = 'buffer' },
-    })
+      { name = 'buffer', keyword_length = 5 },
+      { name = 'path' }
+    }),
+    formatting = {
+      format = require'lspkind'.cmp_format({
+        with_text = true,
+        menu = {
+          nvim_lsp = '[LSP]',
+          buffer = '[BUF]',
+          treesitter = '[TS]',
+        }
+      })
+    }
   })
 
   -- Set configuration for specific filetype.
