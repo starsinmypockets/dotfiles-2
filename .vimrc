@@ -36,9 +36,8 @@ autocmd Filetype yml setlocal shiftwidth=2 commentstring=#\ %s
 autocmd Filetype yaml setlocal shiftwidth=2 commentstring=#\ %s
 
 "" autocmd BufRead,BufNewFile * setlocal signcolumn=auto
-highlight LineNr ctermfg=grey
-colorscheme desert
-
+highlight LineNr ctermfg=grol
+colorscheme ghdark
 
 "" Man pages
 runtime! ftplugin/man.vim
@@ -88,6 +87,7 @@ nnoremap <Leader>nh :nohl<CR>
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>h :nohlsearch<CR>
 nnoremap <Leader>w <C-w>
+nnoremap <Leader>wc g<C-g><CR>
 nnoremap <expr> <Leader>s exists('g:syntax_on') ? ':syntax off<cr>' : ':syntax enable<cr>'
 
 nnoremap <silent> <C-Left> :TmuxNavigateLeft<cr> 
@@ -295,8 +295,16 @@ xmap <silent> <C-s> <Plug>(coc-range-select)
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
 
+"""""""""
+" FOLDS
+"""""""""
 " Add `:Fold` command to fold current buffer.
 command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+nnoremap <Leader>z zR<CR>
+
+set foldmethod=indent
+set foldlevel=0
+set foldclose=all
 
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
@@ -396,3 +404,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="horizontal"
+
+"""
+" END ULTISNIPS
+"""

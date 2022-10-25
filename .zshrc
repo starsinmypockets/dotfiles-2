@@ -5,8 +5,7 @@ echo "Loading .zshrc"
 export ZSH="$HOME/.oh-my-zsh"
 bindkey -v
 
-# Add Yarn bin to path
-export PATH="$PATH:$(yarn global bin)"
+export PATH="$PATH:$(yarn global bin):/usr/bin/dsutils"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -16,7 +15,7 @@ ZSH_THEME="robbyrussell"
 source ~/.zsh_profile
 tmux -f ~/.tmux.conf
 
-plugins=(docker git npm nvm pip python tmux tmuxinator vi-mode yarn z ripgrep)
+plugins=(docker git npm nvm pip python tmux tmuxinator vi-mode yarn z zsh-autosuggestions ripgrep)
 
 eval "`pip completion --zsh`"
 source $ZSH/oh-my-zsh.sh
@@ -41,6 +40,9 @@ rld-greenclip
 
 # zsh fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# syntax highlighting
+source .zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # tree command which ignores gitignored
 function treeg {

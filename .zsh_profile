@@ -16,6 +16,11 @@ export EDITOR="vim"
 export VDPAU_DRIVER=va_gl
 export ZSH_THEME="darkblood"
 export RIPGREP_CONFIG_PATH="$HOME"
+export PATH=$PATH:~/.vim/plugged/vim-iced/bin
+
+
+source ~/.env
+
 
 # ALIASES
 alias aliases="compgen -a"

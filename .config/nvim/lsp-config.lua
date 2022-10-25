@@ -30,6 +30,7 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
   vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
+  vim.keymap.set('n', '<space>mm', vim.lsp.diagnostic.show_line_diagnostics, bufopts)
 end
 
 local lsp_flags = {
@@ -41,6 +42,10 @@ require('lspconfig')['pyright'].setup{
     flags = lsp_flags,
 }
 require('lspconfig')['tsserver'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+}
+require('lspconfig')['clojure_lsp'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
 }

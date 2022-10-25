@@ -23,6 +23,7 @@ set ignorecase " Ignore case in search...
 set smartcase " ...unless we use capitals in search
 set scrolloff=8
 set signcolumn=yes
+set shell=/bin/zsh
 
 colorscheme ghdark
 
@@ -50,20 +51,22 @@ autocmd Filetype yaml setlocal shiftwidth=2 commentstring=#\ %s
 
 let mapleader = " "
 
-nnoremap <Leader>p :set paste!<CR>
-nnoremap <Leader>pp :Prettier<CR>
-nnoremap <Leader>n :set nonumber!<CR>
-nnoremap <Leader>nt :NERDTreeToggle<CR>
-nnoremap <Leader>gg :GitGutterToggle<CR>
-nnoremap <Leader>gd :Gdiff<CR>
-nnoremap <Leader>gb :Gblame<CR>
-nnoremap <Leader>v :vsplit<CR>
-nnoremap <Leader>h :split<CR>
-nnoremap <Leader>nh :nohl<CR>
+nnoremap <Leader>cd :Copilot disable<CR>
+nnoremap <Leader>ce :Copilot enable<CR>
 nnoremap <Leader>f :Files<CR>
+nnoremap <Leader>gb :Gblame<CR>
+nnoremap <Leader>gd :Gdiff<CR>
 nnoremap <Leader>h :nohlsearch<CR>
+nnoremap <Leader>n :set nonumber!<CR>
+nnoremap <Leader>nh :nohl<CR>
+nnoremap <Leader>nt :NERDTreeToggle<CR>
+nnoremap <Leader>p :set paste!<CR>
+nnoremap <Leader>pc :lua vim.lsp.buf.formatting()<CR>
+nnoremap <Leader>pp :Prettier<CR>
+nnoremap <Leader>v :vsplit<CR>
 nnoremap <Leader>w <C-w>
 nnoremap <Leader>wc g<C-g><CR>
+
 nnoremap <expr> <Leader>s exists('g:syntax_on') ? ':syntax off<cr>' : ':syntax enable<cr>'
 nnoremap <silent> <C-Left> :TmuxNavigateLeft<cr> 
 nnoremap <silent> <C-Down> :TmuxNavigateDown<cr>
@@ -144,6 +147,14 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'onsails/lspkind.nvim'
 Plug 'kdheepak/lazygit.nvim'
 Plug 'iamcco/markdown-preview.nvim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'jmcantrell/vim-diffchanges'
+
+" Clojure
+Plug 'Olical/conjure'
+Plug 'guns/vim-sexp'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
 
 call plug#end()
 
